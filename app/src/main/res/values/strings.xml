@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Online Shop</string>
+    <string name="activity2">Activity 2</string>
+    <string-array name="products">
+        <item>Televizor</item>
+        <item>Laptop</item>
+        <item>Frigider</item>
+        <item>Congelator</item>
+        <item>Telefon</item>
+        <item>Incarcator</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>Descriere Televizor</item>
+        <item>Descriere Laptop</item>
+        <item>Descriere Frigider</item>
+        <item>Descriere Congelator</item>
+        <item>Descriere Telefon</item>
+        <item>Descriere Incarcator</item>
+
+    </string-array>
+
+
+
+</resources>
