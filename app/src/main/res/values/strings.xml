@@ -1,14 +1,7 @@
 <resources>
     <string name="app_name">Online Shop</string>
     <string name="activity2">Activity 2</string>
-    <string-array name="products">
-        <item>Televizor</item>
-        <item>Laptop</item>
-        <item>Frigider</item>
-        <item>Congelator</item>
-        <item>Telefon</item>
-        <item>Incarcator</item>
-    </string-array>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="description">
         <item>Descriere Televizor</item>
@@ -20,6 +13,15 @@
 
     </string-array>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="products">
+        <item>Televizor</item>
+        <item>Laptop</item>
+        <item>Frigider</item>
+        <item>Congelator</item>
+        <item>Telefon</item>
+        <item>Incarcator</item>
+    </string-array>
 
 
 </resources>

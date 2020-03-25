@@ -2,6 +2,7 @@ package com.example.onlineshop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText(listDescription[position]);
             }
         });
+
+        PreferenceManager.setDefaultValues(this,R.xml.preference, false);
     }
 
 
@@ -121,12 +124,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.item2 :
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                openSettings();
                 return true;
             case R.id.item3 :
                 Toast.makeText(this, "More Tools", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.subitem1 :
-                Toast.makeText(this, "item 1.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Save Activity.", Toast.LENGTH_SHORT).show();
+                openActivitySAVE();
                 return true;
             case R.id.subitem2 :
                 Toast.makeText(this, "Item 2.", Toast.LENGTH_SHORT).show();
@@ -157,5 +162,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // open settings , preferenceActivity
+    public void openSettings()
+    {
+        Intent intent2 = new Intent(this, SettingsActivity.class);
+        startActivity(intent2);
+    }
+
+    public void openActivitySAVE()
+    {
+        Intent intent3 = new Intent(this, ActivitySave.class);
+        startActivity(intent3);
+    }
 
 }
