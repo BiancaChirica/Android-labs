@@ -19,10 +19,10 @@
 
         <menu>
         <item android:id="@+id/subitem1"
-            android:title="Tool 1"/>
+            android:title="Save Activity"/>
 
             <item android:id="@+id/subitem2"
-                android:title="Tool 2"/>
+                android:title="Sensors"/>
 
             <item android:id="@+id/subitem3"
                 android:title="Tool 3"/>

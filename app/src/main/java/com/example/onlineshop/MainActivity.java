@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onSaveInstanceState(Bundle outState)
     {
         super.onSaveInstanceState(outState);
+        if(positionNumber != null)
         outState.putInt("position", positionNumber);
 
     }
@@ -119,22 +120,23 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.item1 :
-                Toast.makeText(this, "Fire + new activity", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Activity with dialog", Toast.LENGTH_SHORT).show();
                 openActivity2();
                 return true;
             case R.id.item2 :
-                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Preference Activity", Toast.LENGTH_SHORT).show();
                 openSettings();
                 return true;
             case R.id.item3 :
-                Toast.makeText(this, "More Tools", Toast.LENGTH_SHORT).show();
+           //     Toast.makeText(this, "More Tools", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.subitem1 :
                 Toast.makeText(this, "Save Activity.", Toast.LENGTH_SHORT).show();
                 openActivitySAVE();
                 return true;
             case R.id.subitem2 :
-                Toast.makeText(this, "Item 2.", Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(this, "Sensors.", Toast.LENGTH_SHORT).show();
+                openActivitySensors();
                 return true;
             case R.id.subitem3 :
                 Toast.makeText(this, "Item 3.", Toast.LENGTH_SHORT).show();
@@ -145,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //open new activity
+    //open new activity, the one with  dialog
     public void openActivity2(){
         String selectedDescription;
        if( positionNumber == null )
@@ -173,6 +175,11 @@ public class MainActivity extends AppCompatActivity {
     {
         Intent intent3 = new Intent(this, ActivitySave.class);
         startActivity(intent3);
+    }
+
+    public void openActivitySensors(){
+        Intent intent4 = new Intent(this, SensorsActivity.class);
+        startActivity(intent4);
     }
 
 }
