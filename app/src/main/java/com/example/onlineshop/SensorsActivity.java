@@ -65,7 +65,7 @@ import java.util.List;
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView tv2 = findViewById(R.id.textView2);
-                tv2.setText(sensor.get(position).getName().toString()  + "\nValoare:\n" + valueSens);
+                tv2.setText(sensor.get(position).getName().toString()  + "\nValoare:\n" + valueSens[position]);
             }
         });
 
@@ -93,43 +93,43 @@ import java.util.List;
         switch(event.sensor.getType())
          {
              case Sensor.TYPE_GYROSCOPE :
-                 valueSens[1] += String.valueOf(event.values[0]);
+                 valueSens[1] = String.valueOf(event.values);
                  break;
              case Sensor.TYPE_MAGNETIC_FIELD :
-                 valueSens[2] += String.valueOf(event.values[0]);
+                 valueSens[2] = String.valueOf(event.values);
                  break;
              case Sensor.TYPE_PROXIMITY :
-                 valueSens[3] += String.valueOf(event.values[0]);
+                 valueSens[3] = String.valueOf(event.values);
                  break;
              case Sensor.TYPE_LIGHT :
-                 valueSens[4] += String.valueOf(event.values[0]);
+                 valueSens[4] = String.valueOf(event.values);
                  break;
              case Sensor.TYPE_PRESSURE :
-                 valueSens[5] += String.valueOf(event.values[0]);
+                 valueSens[5] = String.valueOf(event.values);
                  break;
              case Sensor.TYPE_RELATIVE_HUMIDITY :
-                 valueSens[6] += String.valueOf(event.values[0]);
+                 valueSens[6] += String.valueOf(event.values);
                  break;
              case Sensor.TYPE_MAGNETIC_FIELD_UNCALIBRATED :
-                 valueSens[7] += String.valueOf(event.values[0]);
+                 valueSens[7] += String.valueOf(event.values);
                  break;
              case Sensor.TYPE_GYROSCOPE_UNCALIBRATED :
-                 valueSens[8] += String.valueOf(event.values[0]);
+                 valueSens[8] += String.valueOf(event.values);
                  break;
              case Sensor.TYPE_GAME_ROTATION_VECTOR :
-                 valueSens[9] += String.valueOf(event.values[0]);
+                 valueSens[9] = event.values.toString();
                  break;
              case Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR :
-                 valueSens[10] += String.valueOf(event.values[0]);
+                 valueSens[10] = event.values.toString();
                  break;
              case Sensor.TYPE_GRAVITY :
-                 valueSens[11] += String.valueOf(event.values[0]);
+                 valueSens[11] = event.values.toString();
                  break;
              case Sensor.TYPE_LINEAR_ACCELERATION :
-                 valueSens[12] += String.valueOf(event.values[0]);
+                 valueSens[12] = event.values.toString();
                  break;
              case Sensor.TYPE_ROTATION_VECTOR :
-                 valueSens[13] += String.valueOf(event.values[0]);
+                 valueSens[13] = event.values.toString();
                  break;
              default:
                  break;

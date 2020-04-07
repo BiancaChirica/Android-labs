@@ -139,7 +139,8 @@ public class MainActivity extends AppCompatActivity {
                 openActivitySensors();
                 return true;
             case R.id.subitem3 :
-                Toast.makeText(this, "Item 3.", Toast.LENGTH_SHORT).show();
+                 openCameraActivity();
+                Toast.makeText(this, "Camera Activity.", Toast.LENGTH_SHORT).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -179,6 +180,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivitySensors(){
         Intent intent4 = new Intent(this, SensorsActivity.class);
+        startActivity(intent4);
+    }
+
+    public void openCameraActivity()
+    {
+        Intent intent4 = new Intent(this, CameraActivity.class);
         startActivity(intent4);
     }
 
